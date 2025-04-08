@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reformkor</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.stationImages = [
+            '03_kep_1.jpeg',
+            '03_kep_2.gif',
+            
+        ]; 
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="language-switch-container">
+                <label class="switch">
+                    <input type="checkbox" id="toggle-lang">
+                    <span class="slider">
+                        <img id="flag-icon" src="flags/hu.svg" alt="Language Flag">
+                    </span>
+                </label>
+            </div>
+            <h1 id="station-title">Reformkor</h1>
+            
+        </header>
+        <div class="circular-gallery">
+            
+            <div class="circular-gallery">
+                <button id="prev-image" class="gallery-nav left">
+                    <!-- Balra nyíl SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-width="2" fill="none" d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+            
+                <div class="gallery-image-container">
+                    <img id="gallery-image" src="images/01_kep_1.png" alt="Galéria kép">
+                </div>
+            
+                <button id="next-image" class="gallery-nav right">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-width="2" fill="none" d="M9 6l6 6-6 6"/>
+                    </svg>
+                </button>
+            </div>
+          
+        </div>
+
+        <section class="audio-player">
+            <audio id="audio-source" src="mp3/03.mp3" preload="metadata"></audio>
+        
+
+            <div class="speed-control">
+                <button id="speed-button">1×</button>
+            </div>
+
+            <div class="progress-bar-container" id="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="controls">
+                <div class="controls">
+                    <!-- Visszatekerés -->
+                    <button id="rewind-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 4V1L8 5l4 4V6a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/>
+                            <text id="rewind-text" x="12" y="16" fill="#ffffff" font-size="8px" font-family="Arial" font-weight="bold" text-anchor="middle"></text>
+                        </svg>
+                    </button>
+                <button id="play-pause-button" class="play-pause-control">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+                <button id="forward-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 4V1l4 4-4 4V6a6 6 0 1 0 6 6h2a8 8 0 1 1-8-8z"/>
+                        <text id="forward-text" x="12" y="16" fill="#ffffff" font-size="8px" font-family="Arial" font-weight="bold" text-anchor="middle"></text>
+                    </svg>
+                </button>
+
+            
+            </div>
+        </section>
+        <section class="station-info">
+            <h2></h2><br>
+            <div id="accordion"></div>
+        </section>
+
+       
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Állomás 01 | Station 01</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+    <!-- Képek listája -->
+    <script>
+        window.stationImages = [
+            '01_kep_4.gif',
+            '01_kep_1.png', 
+            '01_kep_2.png', 
+            '01_kep_3.jpeg'
+        ]; 
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Fejléc (header) -->
+        <header>
+            <div class="language-switch-container">
+                <label class="switch">
+                    <input type="checkbox" id="toggle-lang">
+                    <span class="slider">
+                        <img id="flag-icon" src="flags/hu.svg" alt="Language Flag">
+                    </span>
+                </label>
+            </div>
+            <h1 id="station-title">Állomás 01</h1>
+
+      
+
+        <!-- Galéria -->
+        <div class="circular-gallery">
+            <button id="prev-image" class="gallery-nav left">
+                <!-- Balra nyíl SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-width="2" fill="none" d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+        
+            <div class="gallery-image-container">
+                <img id="gallery-image" src="images/01_kep_1.png" alt="Galéria kép">
+            </div>
+        
+            <button id="next-image" class="gallery-nav right">
+                <!-- Jobbra nyíl SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-width="2" fill="none" d="M9 6l6 6-6 6"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Audiólejátszó -->
+        <section class="audio-player">
+            <audio id="audio-source" src="mp3/01.mp3" preload="metadata"></audio>
+        
+            <div class="speed-control">
+                <button id="speed-button">1×</button>
+            </div>
+
+            <div class="progress-bar-container" id="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="controls">
+                <button id="rewind-button">
+                    <!-- Vissza SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 4V1L8 5l4 4V6a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/>
+                    </svg>
+                </button>
+                
+                <button id="play-pause-button" class="play-pause-control">
+                    <!-- Play SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+
+                <button id="forward-button">
+                    <!-- Előre SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 4V1l4 4-4 4V6a6 6 0 1 0 6 6h2a8 8 0 1 1-8-8z"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Lenyíló információs blokk -->
+        <section class="station-info">
+            <div id="accordion"></div>
+        </section>
+
+    </div>
+
+    <!-- JavaScript fájl betöltése -->
+    <script src="script.js"></script>
+
+</body>
+</html>
